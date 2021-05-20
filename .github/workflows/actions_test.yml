@@ -1,0 +1,10 @@
+name: GitHub Actions Test
+on:  workflow_dispatch
+jobs:
+  echo_hello_world:
+    runs-on: [self-hosted, Windows, X64]
+    steps:
+      - name: Echo Hello World
+        run: echo "Hello, is this thing on"
+      - name: Check Runner OS
+        run: echo "This job is now running on a ${{ runner.os }} server!"
